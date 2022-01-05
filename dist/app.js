@@ -2,9 +2,9 @@
 
 var _express = _interopRequireDefault(require("express"));
 
-var _index = _interopRequireDefault(require("./models/index"));
+var _path = _interopRequireDefault(require("path"));
 
-var _index2 = _interopRequireDefault(require("./routes/index"));
+var _index = _interopRequireDefault(require("./routes/index.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13,6 +13,11 @@ app.use(_express.default.json());
 app.use(_express.default.urlencoded({
   extended: false
 }));
-app.use("/", _index2.default.departementsRouter);
-app.use("/users", _index2.default.usersRouter);
-app.listen(3000, () => console.log("fffff"));
+app.use('/departements', _index.default.departementsRouter);
+app.use('/users', _index.default.usersRouter);
+app.set('view engine', 'pug');
+app.set('views', _path.default.join(__dirname, 'views'));
+app.get('/ddd', (req, res) => {
+  res.render('index');
+});
+app.listen(3000);
