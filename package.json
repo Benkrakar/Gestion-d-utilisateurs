@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "une application de gestion de l'utilisateur pour l'administrateur enregistre un ou plusieurs utilisateur -s- qui appartient-iennent- à un Département.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
+    "build": "babel app.js -d dist",
+    "dev": "npm run build && nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,10 @@
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.12.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7"
   }
 }

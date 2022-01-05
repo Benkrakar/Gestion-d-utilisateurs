@@ -1,15 +1,15 @@
-exports.getAllDepartements = (req, res) => {
+export const getAllDepartements = (req, res) => {
   console.log("getAllDepartements");
 };
-exports.createDepartement= (req, res) => {
+export const createDepartement = (req, res) => {
   console.log("createdepartement");
 };
-exports.getDepartement= (req, res) => {
+export const getDepartement = (req, res) => {
   console.log("getdepartement");
 };
-exports.updateDepartement= (req, res) => {
+export const updateDepartement = (req, res) => {
   console.log("updatedepartement");
 };
-exports.deleteDepartement= (req, res) => {
+export const deleteDepartement = (req, res) => {
   console.log("deletedepartement");
 };

@@ -1,15 +1,16 @@
-exports.getAllUsers = (req, res) => {
+export const getAllUsers = (req, res) => {
   console.log("getAllUsers");
 };
-exports.createUser = (req, res) => {
+export const createUser = (req, res) => {
   console.log("createUser");
 };
-exports.getUser = (req, res) => {
+export const getUser = (req, res) => {
   console.log("getUser");
 };
-exports.updateUser = (req, res) => {
+export const updateUser = (req, res) => {
   console.log("updateUser");
 };
-exports.deleteUser = (req, res) => {
+export const deleteUser = (req, res) => {
   console.log("deleteUser");
 };
+

@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize");
+import { DataTypes } from "sequelize";
 const Users = (sequelize) =>
   sequelize.define("users", {
     id: {
@@ -19,4 +19,4 @@ const Users = (sequelize) =>
       allowNull: false,
     },
   });
-module.exports = Users;
+export default Users;

@@ -1,14 +1,15 @@
-const express = require("express");
-
+"use strict";
+import express from "express";
+import model from "./models/index.js";
+import routes from "./routes/index.js";
 const app = express();
 
-const model = require("./models/index");
-const routes = require("./routes/index");
-
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-app.use("/", routes.departementsRouter);
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
+app.use("/departements", routes.departementsRouter);
 app.use("/users", routes.usersRouter);
-
 app.listen(3000, () => console.log("fffff"));

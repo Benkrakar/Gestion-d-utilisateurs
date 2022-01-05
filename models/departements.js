@@ -1,4 +1,4 @@
-const {  DataTypes } = require("sequelize");
+import {  DataTypes } from "sequelize";
 
 const Departements = (sequelize) =>
   sequelize.define("departements", {
@@ -17,4 +17,4 @@ const Departements = (sequelize) =>
     },
   });
  
-module.exports = Departements;
+export default Departements;

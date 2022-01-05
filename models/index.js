@@ -1,5 +1,7 @@
-require("dotenv").config();
-const Sequelize = require("sequelize");
+import "dotenv/config";
+ import users from "./users.js"
+ import departements from "./departements.js"
+import Sequelize from "sequelize";
 
 const host = process.env.DATABASE_HOST;
 const username = process.env.DATABASE_USER;
@@ -12,12 +14,11 @@ const sequelize = new Sequelize(database, username, password, {
 });
 
 const models = {};
-
-models.users = require("./users")(sequelize);
-models.departements = require("./departements")(sequelize);
+models.users = users(sequelize);
+models.departements = departements(sequelize);
 
 models.departements.hasMany(models.users);
 
 sequelize.sync({ force: false });
 
-module.exports = models;
+export default models;

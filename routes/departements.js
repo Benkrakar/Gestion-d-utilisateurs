@@ -1,6 +1,8 @@
-const express = require("express");
+import express from "express";
+import * as departementsController from "../controllers/departementsController.js";
+
 const router = express.Router();
-const departementsController = require("../controllers/departementsController.js");
+
 
 router
   .route("/")
@@ -13,4 +15,4 @@ router
   .patch(departementsController.updateDepartement)
   .delete(departementsController.deleteDepartement);
 
-module.exports = router;
+export default router;

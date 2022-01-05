@@ -1,4 +1,7 @@
 const routes = {};
-routes.usersRouter = require("./users");
-routes.departementsRouter = require("./departements");
-module.exports = routes;
+import usersRouter from "./users.js"
+import departementsRouter from "./departements.js";
+
+routes.usersRouter = usersRouter;
+routes.departementsRouter = departementsRouter;
+export default routes;
