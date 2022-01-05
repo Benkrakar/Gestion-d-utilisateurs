@@ -1,0 +1,23 @@
+{
+  "name": "gestion-d-utilisateurs",
+  "version": "1.0.0",
+  "description": "une application de gestion de l'utilisateur pour l'administrateur enregistre un ou plusieurs utilisateur -s- qui appartient-iennent- à un Département.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benkrakar/Gestion-d-utilisateurs.git"
+  },
+  "author": "B3NKR4K4R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benkrakar/Gestion-d-utilisateurs/issues"
+  },
+  "homepage": "https://github.com/Benkrakar/Gestion-d-utilisateurs#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.5"
+  }
+}
