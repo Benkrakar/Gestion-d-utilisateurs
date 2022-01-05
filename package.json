@@ -4,7 +4,7 @@
   "description": "une application de gestion de l'utilisateur pour l'administrateur enregistre un ou plusieurs utilisateur -s- qui appartient-iennent- à un Département.",
   "main": "server.js",
   "scripts": {
-    "dev":"nodemon server.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,17 @@
-const sequelize = require("../config/db");
+const Sequelize = require("sequelize");
+
+const sequelize = new Sequelize("users_management", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+});
+
 const models = {};
 
-models.sequelize = sequelize
-
-models.users = require("./users")
-models.departements = require("./departements")
+models.users = require("./users")(sequelize);
+models.departements = require("./departements")(sequelize);
 
 models.departements.hasMany(models.users);
 
-module.exports = models
+sequelize.sync({ force: false });
+
+module.exports = models;
