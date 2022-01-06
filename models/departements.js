@@ -1,7 +1,7 @@
-import {  DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
 const Departements = (sequelize) =>
-  sequelize.define("departements", {
+  sequelize.define('departements', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -16,5 +16,5 @@ const Departements = (sequelize) =>
       allowNull: false,
     },
   });
- 
+
 export default Departements;

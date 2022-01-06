@@ -1,16 +1,15 @@
-import express from "express";
-import * as departementsController from "../controllers/departementsController.js";
+import express from 'express';
+import * as departementsController from '../controllers/departementsController.js';
 
 const router = express.Router();
 
-
 router
-  .route("/")
+  .route('/')
   .get(departementsController.getAllDepartements)
   .post(departementsController.createDepartement);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(departementsController.getDepartement)
   .patch(departementsController.updateDepartement)
   .delete(departementsController.deleteDepartement);

@@ -1,17 +1,17 @@
-import express from "express";
-import * as usersController from "../controllers/usersController.js";
+import express from 'express';
+import * as usersController from '../controllers/usersController.js';
+
 const router = express.Router();
 
 router
-  .route("/")
+  .route('/')
   .get(usersController.getAllUsers)
   .post(usersController.createUser);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(usersController.getUser)
   .patch(usersController.updateUser)
   .delete(usersController.deleteUser);
-
 
 export default router;

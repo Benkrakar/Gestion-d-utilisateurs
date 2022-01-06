@@ -1,7 +1,7 @@
-import "dotenv/config";
- import users from "./users.js"
- import departements from "./departements.js"
-import Sequelize from "sequelize";
+import 'dotenv/config';
+import Sequelize from 'sequelize';
+import users from './users.js';
+import departements from './departements.js';
 
 const host = process.env.DATABASE_HOST;
 const username = process.env.DATABASE_USER;
@@ -10,7 +10,7 @@ const database = process.env.DATABASE_NAME;
 
 const sequelize = new Sequelize(database, username, password, {
   host: host,
-  dialect: "mysql",
+  dialect: 'mysql',
 });
 
 const models = {};
@@ -20,5 +20,4 @@ models.departements = departements(sequelize);
 models.departements.hasMany(models.users);
 
 sequelize.sync({ force: false });
-
 export default models;

@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import routes from './routes/index.js';
 
 const __dirname = path.resolve();
+
 const app = express();
 
 app.use(express.json());
