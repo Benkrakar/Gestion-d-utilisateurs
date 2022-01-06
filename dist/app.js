@@ -19,7 +19,8 @@ app.use(_express.default.urlencoded({
 }));
 app.use('/departements', _index.default.departementsRouter);
 app.use('/users', _index.default.usersRouter);
-app.use((0, _morgan.default)('dev'));
+app.use((0, _morgan.default)('dev')); //TODO:👋 enable morgan in dev only 👋
+
 app.set('view engine', 'pug');
 app.set('views', _path.default.join(_dirname, 'views'));
 app.get('/ddd', (req, res) => {

@@ -19,6 +19,7 @@ app.use(morgan('dev'));
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
 
 app.get('/ddd', (req, res) => {
   res.render('index');
