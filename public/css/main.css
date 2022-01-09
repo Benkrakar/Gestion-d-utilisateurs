@@ -1,24 +1,62 @@
 body {
- font: 16px Popin, sans-serif;
+  font: 16px Popin, sans-serif;
   background-color: #140035;
+  color: #ffffff;
 }
 .navbar {
   color: white;
   background-color: rgb(17, 0, 45) !important;
-  
-  background:linear-gradient(90deg, rgba(4,115,117,0.3570378493194152) 0%, rgba(0,232,233,0.5438725832129726) 50%, rgba(59,168,167,1) 100%)
+
+  background: linear-gradient(
+      90deg,
+      rgba(4, 115, 117, 0.3570378493194152) 0%,
+      rgba(0, 232, 233, 0.5438725832129726) 50%,
+      rgba(59, 168, 167, 1) 100%
+    )
     left bottom #777 no-repeat;
   background-size: 100% 2px;
 }
-.icon{
+.icon {
   max-width: 5em;
   max-height: 5em;
   color: #fff;
 }
-.table-section{
- background-color: rgb(17, 0, 45) !important;
+.table-section {
+  background-color: rgb(17, 0, 45) !important;
   box-shadow: 0px 2px 25px 1px rgba(105, 83, 240, 0.13);
 }
-.table{
-  color:whitesmoke;
+.modal-content {
+  background-color: rgb(17, 0, 45) !important;
+}
+.close {
+  background-color: rgb(17, 0, 45) !important;
+  border: none;
+  color: rgba(59, 168, 167, 1) !important;
+}
+.modal-header {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(4, 115, 117, 0.3570378493194152) 0%,
+    rgba(0, 232, 233, 0.5438725832129726) 50%,
+    rgba(59, 168, 167, 1) 100%
+  ) 1;
+}
+.modal-footer {
+  border-top: 2px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(4, 115, 117, 0.3570378493194152) 0%,
+    rgba(0, 232, 233, 0.5438725832129726) 50%,
+    rgba(59, 168, 167, 1) 100%
+  ) 1;
+}
+.table {
+  color: whitesmoke;
+}
+.form-new {
+  color: white;
+}
+.form-control {
+  background-color: #f1f1f1 !important;
 }

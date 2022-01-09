@@ -24,7 +24,4 @@ app.use((0, _morgan.default)('dev')); //TODO:👋 enable morgan in dev only 👋
 app.set('view engine', 'pug');
 app.set('views', _path.default.join(_dirname, 'views'));
 app.use(_express.default.static('public'));
-app.get('/ddd', (req, res) => {
-  res.render('index');
-});
 app.listen(3000);

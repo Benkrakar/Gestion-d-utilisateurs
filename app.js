@@ -22,8 +22,4 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
-app.get('/ddd', (req, res) => {
-  res.render('index');
-});
-
 app.listen(3000);

@@ -8,10 +8,7 @@ router
   .get(usersController.getAllUsers)
   .post(usersController.createUser);
 
-router
-  .route('/:id')
-  .get(usersController.getUser)
-  .patch(usersController.updateUser)
-  .delete(usersController.deleteUser);
+router.route('/delete/:id').get(usersController.deleteUser);
+router.route('/update/:id').patch(usersController.updateUser);
 
 export default router;

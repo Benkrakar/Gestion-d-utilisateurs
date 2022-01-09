@@ -17,7 +17,6 @@ const models = {};
 models.users = users(sequelize);
 models.departements = departements(sequelize);
 
-models.departements.hasMany(models.users);
-
+models.users.belongsTo(models.departements);
 sequelize.sync({ force: false });
 export default models;
