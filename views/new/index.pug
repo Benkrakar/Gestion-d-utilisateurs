@@ -5,14 +5,16 @@ block content
       .col-md-6
        .table-section.px-5.py-2
         h2.my-5.text-center.title Ajouter un nouveau utilisateur
-        form.form-new(action='/users', method='post')
+        form.form-new(action=`/update/${user.id}`, method='post')
           .col-md-12.mb-3
-            input#nomComplet.form-control(name='nomComplet' type='text' placeholder='Nom complet' )
+            input#nomComplet.form-control(name='nomComplet' type='text' placeholder='Nom complet' value=`${user.nomComplet}` )
           .col-md-12.mb-3
-            input#password.form-control(name='password' type='password' placeholder='Password')
+            input#password.form-control(name='password' type='password' placeholder='Password' value=`${user.nomComplet}`)
           .col-md-12.mb-3
-            input#email.form-control(name='email' type='email' placeholder='Email')
+            input#email.form-control(name='email' type='email' placeholder='Email' value=`${user.email}`)
           .col-md-12
-            input#departementId.form-control(name='departementId' type='text' placeholder='Departement')
+            select#departementId.form-control(name='departementId'  )
+              each departement in departements
+               option(value=`${departement.id}`)=departement.nomDepartement
           .d-grid.gap-2.col-6.mx-auto.mb-5.mt-4
             button.btn.btn-outline-info(type='submit') sauvegarder

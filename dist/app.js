@@ -18,10 +18,10 @@ app.use(_express.default.urlencoded({
   extended: false
 }));
 app.use('/departements', _index.default.departementsRouter);
-app.use('/users', _index.default.usersRouter);
+app.use('/', _index.default.usersRouter);
 app.use((0, _morgan.default)('dev')); //TODO:👋 enable morgan in dev only 👋
 
 app.set('view engine', 'pug');
 app.set('views', _path.default.join(_dirname, 'views'));
-app.use(_express.default.static('public'));
+app.use(_express.default.static(_path.default.join(_dirname, 'public')));
 app.listen(3000);

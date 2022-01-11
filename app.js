@@ -14,12 +14,12 @@ app.use(
   })
 );
 app.use('/departements', routes.departementsRouter);
-app.use('/users', routes.usersRouter);
+app.use('/', routes.usersRouter);
 app.use(morgan('dev'));
 //TODO:👋 enable morgan in dev only 👋
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000);

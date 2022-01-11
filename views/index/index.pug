@@ -19,8 +19,8 @@ block content
               td=user.email
               td=user.departement.nomDepartement
               td 
-                a.btn.btn-outline-success(type='submit' href=`/users/delete/${user.id}`) Edit
-                a.mx-3.btn.btn-outline-danger(type='submit') Del
+                a.btn.btn-outline-success(type='submit' href=`/update/${user.id}`) Edit
+                a.mx-3.btn.btn-outline-danger(type='submit' href=`/delete/${user.id}`) Del
     #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
       .modal-dialog
         .modal-content
@@ -30,7 +30,7 @@ block content
               span.fw-bold x
           .modal-body
             form
-            form.form-new(action='/users', method='post')
+            form.form-new(action='/', method='post')
               .col-md-12.mb-3
                 input#nomComplet.form-control(name='nomComplet' type='text' placeholder='Nom complet' )
               .col-md-12.mb-3
@@ -38,7 +38,10 @@ block content
               .col-md-12.mb-3
                 input#email.form-control(name='email' type='email' placeholder='Email')
               .col-md-12
-                input#departementId.form-control(name='departementId' type='text' placeholder='Departement')
+                //- input#departementId.form-control(name='departementId' type='text' placeholder='Departement')
+                select#departementId.form-select(name='departementId'  )
+                  each departement in departements
+                    option(value=`${departement.id}`)=departement.nomDepartement
               .d-grid.gap-2.col-6.mx-auto.mb-5.mt-4
                 button.btn.btn-outline-info(type='submit') sauvegarder
           //- .modal-footer
