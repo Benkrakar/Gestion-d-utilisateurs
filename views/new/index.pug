@@ -1,7 +1,7 @@
 extend ../layout/index
 block content
-  .p-5
-    .row.justify-content-center.mt-5
+  .px-5.pt-5
+    .row.justify-content-center
       .col-md-6
        .table-section.px-5.py-2
         h2.my-5.text-center.title Ajouter un nouveau utilisateur
@@ -13,8 +13,8 @@ block content
           .col-md-12.mb-3
             input#email.form-control(name='email' type='email' placeholder='Email' value=`${user.email}`)
           .col-md-12
-            select#departementId.form-control(name='departementId'  )
+            select#departementId.form-select(name='departementId'  )
               each departement in departements
                option(value=`${departement.id}`)=departement.nomDepartement
-          .d-grid.gap-2.col-6.mx-auto.mb-5.mt-4
+          .d-grid.gap-2.col-6.mx-auto.mb-2.mt-4
             button.btn.btn-outline-info(type='submit') sauvegarder

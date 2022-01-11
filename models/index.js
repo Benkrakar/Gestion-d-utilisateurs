@@ -18,9 +18,7 @@ models.users = users(sequelize);
 models.departements = departements(sequelize);
 
 models.users.belongsTo(models.departements, {
-  foreignKey: { name: 'departementId', allowNull: true },
-  onDelete: 'CASCADE',
-  onUpdate: 'CASCADE', 
+  foreignKey: { name: 'departementId' },
 });
 sequelize.sync({ force: false });
 export default models;
