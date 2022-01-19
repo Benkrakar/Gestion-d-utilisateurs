@@ -21,7 +21,7 @@ block content
               td 
                 a.btn.btn-outline-success.py-0(type='submit' href=`/update/${user.id}`) Edit
                 a.mx-3.btn.btn-outline-danger.py-0(type='submit' href=`/delete/${user.id}`) Del
-    #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    #usersModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
       .modal-dialog
         .modal-content
           .modal-header
@@ -44,6 +44,20 @@ block content
                     option(value=`${departement.id}`)=departement.nomDepartement
               .d-grid.gap-2.col-6.mx-auto.mb-5.mt-4
                 button.btn.btn-outline-info(type='submit') sauvegarder
-          //- .modal-footer
-          //-   button.btn.btn-outline-info(type='button') Send message
-          
+    #departementModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Nouveau departement
+            button.close(type='button' data-bs-dismiss='modal' aria-label='Close') 
+              span.fw-bold x
+          .modal-body
+            form
+            form.form-new(action='/departements', method='post')
+              .col-md-12.mb-3
+                input#nomComplet.form-control(name='nomDepartement' type='text' placeholder='Nom de departement' )
+              .col-md-12.mb-3
+                input#nomComplet.form-control(name='description' type='text' placeholder='description de departement' )
+              .col-md-12.mb-3
+              .d-grid.gap-2.col-6.mx-auto.mb-5.mt-4
+                button.btn.btn-outline-info(type='submit') sauvegarder

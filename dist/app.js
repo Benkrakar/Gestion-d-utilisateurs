@@ -30,5 +30,5 @@ app.set('views', _path.default.join(_dirname, 'views'));
 app.use(_express.default.static(_path.default.join(_dirname, 'public')));
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log('app running');
+  console.log(`app running on '${PORT}'`);
 });

@@ -10,8 +10,14 @@ export const getAllDepartements = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
-export const createDepartement = (req, res) => {
-  console.log('createdepartement');
+export const createDepartement = async (req, res) => {
+  const { nomDepartement, description } = req.body;
+  try {
+    await models.departements.create({ nomDepartement, description });
+    return res.status(200).redirect('/');
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
 };
 export const getDepartement = (req, res) => {
   console.log('getdepartement');
